@@ -89,7 +89,8 @@ def test_sequence():
 
         if spec["method"] == "begin":
             if "client" not in current_app.info:
-                current_app.info["client"] = current_app.rph.issuer2rp[_kwargs["issuer_id"]]
+                logger.debug("issuers: {}".format(list(current_app.rph.issuer2rp.keys())))
+                current_app.info["client"] = current_app.rph.issuer2rp[current_app.info["issuer"]]
             response = redirect(_res['url'], 303)
             return response
 
