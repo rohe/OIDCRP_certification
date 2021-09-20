@@ -1,0 +1,7 @@
+{
+  "port": 8090,
+  "domain": "127.0.0.1",
+  "server_cert": "certs/cert.pem",
+  "server_key": "certs/key.pem",
+  "debug": true
+}

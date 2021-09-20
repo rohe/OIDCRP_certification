@@ -1,0 +1,103 @@
+{
+  "issuer": "https://127.0.0.1:5000",
+  "default_config": "config.json",
+  "base_url": "https://127.0.0.1:8090",
+  "test": {
+    "oidcc-client-test-discovery-openid-config": {
+      "sequence": [
+        {
+          "method": "init_client",
+          "args": {
+            "issuer": "issuer"
+          },
+          "return": "client"
+        },
+        {
+          "method": "do_provider_info",
+          "args": {
+            "client": "client"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-discovery-issuer-mismatch": {
+      "sequence": [
+        {
+          "method": "init_client",
+          "args": {
+            "issuer": "issuer"
+          },
+          "return": "client"
+        },
+        {
+          "method": "do_provider_info",
+          "args": {
+            "client": "client"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-discovery-jwks-uri-keys": {
+      "sequence": [
+        {
+          "method": "init_client",
+          "args": {
+            "issuer": "issuer"
+          },
+          "return": "client"
+        },
+        {
+          "method": "do_provider_info",
+          "args": {
+            "client": "client"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-idtoken-sig-none": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer"
+          },
+          "return": "authn_request"
+        }
+      ]
+    },
+    "oidcc-client-test-signing-key-rotation-just-before-signing": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer"
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer_id": "issuer"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-signing-key-rotation": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer"
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer_id": "issuer"
+          }
+        }
+      ]
+    }
+  }
+}
