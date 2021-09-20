@@ -153,6 +153,7 @@ def after_authn(request_args):
 
     # ease access
     current_app.info['state'] = request_args.get('state')
+    current_app.info["response"] = request_args
     return test_sequence()
 
 

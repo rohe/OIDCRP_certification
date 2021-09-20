@@ -66,7 +66,8 @@
         {
           "method": "finalize",
           "args": {
-            "issuer": "issuer"
+            "issuer": "issuer",
+            "response": "response"
           }
         }
       ]
@@ -83,7 +84,8 @@
         {
           "method": "finalize",
           "args": {
-            "issuer_id": "issuer"
+            "issuer": "issuer",
+            "response": "response"
           }
         }
       ]
@@ -100,7 +102,8 @@
         {
           "method": "finalize",
           "args": {
-            "issuer_id": "issuer"
+            "issuer": "issuer",
+            "response": "response"
           }
         }
       ]
