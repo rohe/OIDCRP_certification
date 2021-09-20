@@ -63,15 +63,15 @@ def send_js(path):
 
 @oidc_rp_views.route('/')
 def index():
-    _tests = list(current_app.test_descr["test"].keys())
+    _tests = list(current_app.test_plan["test"].keys())
     return render_template('test_choice.html', tests=_tests,
-                           base_url=current_app.test_descr["base_url"])
+                           base_url=current_app.test_plan["base_url"])
 
 
 def test_sequence():
     step = current_app.info["step"]
     test_id = current_app.info["test_id"]
-    _desc = current_app.test_descr["test"][test_id]
+    _desc = current_app.test_plan["test"][test_id]
     # Now for the test sequence
     for spec in _desc["sequence"][step:]:
         current_app.info["step"] += 1
@@ -101,18 +101,21 @@ def test_sequence():
 def test():
     test_id = request.args['test_id']
 
-    current_app.desc = current_app.test_descr["test"][test_id]
+    current_app.desc = current_app.test_plan["test"][test_id]
     if "config" in current_app.desc:
         conf = current_app.desc["config"]
     else:
-        conf = current_app.test_descr["default_config"]
+        conf = current_app.test_plan["default_config"]
 
-    issuer = current_app.test_descr["issuer"]
+    issuer = current_app.test_plan["issuer"]
     # template_dir = os.path.join(dir_path, 'templates')
 
     _str = open(conf).read()
     _cnf = json.loads(_str)
     _cnf['logging']["handlers"]["file"]["filename"] = f"{test_id}.log"
+    _cnf["domain"] = current_app.test_plan["domain"]
+    _cnf["port"] = current_app.test_plan["port"]
+    _cnf["base_url"] = current_app.test_plan["base_url"]
     _config = Configuration(_cnf, entity_conf=[{"class": RPConfiguration, "attr": "rp"}])
 
     current_app.rph = init_oidc_rp_handler(_config.rp)

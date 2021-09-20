@@ -1,7 +1,7 @@
 {
-  "issuer": "https://127.0.0.1:5000",
+  "issuer": "{ISSUER}",
   "default_config": "config.json",
-  "base_url": "https://127.0.0.1:8090",
+  "base_url": "{BASE_URL}",
   "test": {
     "oidcc-client-test-discovery-openid-config": {
       "sequence": [
@@ -62,6 +62,12 @@
             "issuer_id": "issuer"
           },
           "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer_id": "issuer"
+          }
         }
       ]
     },

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 import json
 import os
 import sys
@@ -24,15 +25,26 @@ def app_setup(name=None):
 
 
 if __name__ == "__main__":
-    _file = sys.argv[1]
-    _test_desc = json.loads(open(_file).read())
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-t', dest="test_plan")
+    parser.add_argument('-D', dest="domain")
+    parser.add_argument('-P', dest="port")
+    parser.add_argument('-i', dest="issuer")
 
-    template_dir = os.path.join(dir_path, 'templates')
+    args = parser.parse_args()
+
+    _test_plan = json.loads(open(args.test_plan).read())
+    _test_plan["issuer"] = args.issuer
+    _test_plan["domain"] = args.domain
+    _test_plan["port"] = args.port
+    _test_plan["base_url"] = "https://{}:{}".format(args.domain, args.port)
+
     _web_conf = json.loads(open("webserver_conf.json").read())
+    _web_conf["port"] = args.port
 
     context = create_context(dir_path, _web_conf)
 
     app = app_setup('oidc_rp')
-    app.test_descr = _test_desc
+    app.test_plan = _test_plan
     app.run(host=_web_conf["domain"], port=_web_conf["port"],
             debug=_web_conf.get("debug", False), ssl_context=context)

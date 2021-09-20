@@ -26,9 +26,9 @@
       }
     }
   },
-  "port": 8090,
-  "domain": "127.0.0.1",
-  "base_url": "https://{domain}:{port}",
+  "port": "{PORT}",
+  "domain": "{DOMAIN}",
+  "base_url": "{BASE_URL}",
   "httpc_params": {
     "verify": false
   },
@@ -130,12 +130,5 @@
         }
       }
     }
-  },
-  "webserver": {
-    "port": 8090,
-    "domain": "127.0.0.1",
-    "server_cert": "certs/cert.pem",
-    "server_key": "certs/key.pem",
-    "debug": true
   }
 }
