@@ -105,6 +105,20 @@
             "issuer": "issuer",
             "response": "response"
           }
+        },
+        {
+          "method": "init_authorization",
+          "args": {
+            "client": "client"
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
         }
       ]
     }
