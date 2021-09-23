@@ -93,6 +93,9 @@ def test_sequence():
                 current_app.info["client"] = current_app.rph.issuer2rp[current_app.info["issuer"]]
             response = redirect(_res['url'], 303)
             return response
+        elif spec["method"] == 'init_authorization':
+            response = redirect(_res['url'], 303)
+            return response
 
     # back to start page
     return index()
