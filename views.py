@@ -61,6 +61,11 @@ def send_js(path):
     return send_from_directory('static', path)
 
 
+@oidc_rp_views.route('/requests/<path:path>')
+def send_request_js(path):
+    return send_from_directory('requests', path)
+
+
 @oidc_rp_views.route('/')
 def index():
     _tests = list(current_app.test_plan["test"].keys())
