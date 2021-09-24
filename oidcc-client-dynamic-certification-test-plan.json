@@ -1,0 +1,127 @@
+{
+  "issuer": "{ISSUER}",
+  "default_config": "config.json",
+  "base_url": "{BASE_URL}",
+  "acct": "idpy.oidcc-client-test-discovery-webfinger-acct@www.certification.openid.net",
+  "test": {
+    "oidcc-client-test-discovery-webfinger-acct": {
+      "sequence": [
+        {
+          "method": "do_webfinger",
+          "args": {
+            "user": "acct"
+          },
+          "return": "client"
+        }
+      ]
+    },
+    "oidcc-client-test-discovery-webfinger-url": {
+      "sequence": [
+        {
+          "method": "init_client",
+          "args": {
+            "issuer": "issuer"
+          },
+          "return": "client"
+        }
+      ]
+    },
+    "oidcc-client-test-discovery-openid-config": {
+      "sequence": [
+        {
+          "method": "init_client",
+          "args": {
+            "issuer": "issuer"
+          },
+          "return": "client"
+        },
+        {
+          "method": "do_provider_info",
+          "args": {
+            "client": "client"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-discovery-jwks-uri-keys": {
+      "sequence": [
+        {
+          "method": "init_client",
+          "args": {
+            "issuer": "issuer"
+          },
+          "return": "client"
+        },
+        {
+          "method": "do_provider_info",
+          "args": {
+            "client": "client"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-discovery-issuer-mismatch": {
+      "sequence": [
+        {
+          "method": "init_client",
+          "args": {
+            "issuer": "issuer"
+          },
+          "return": "client"
+        },
+        {
+          "method": "do_provider_info",
+          "args": {
+            "client": "client"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-dynamic-registration": {
+      "sequence": [
+        {
+          "method": "init_client",
+          "args": {
+            "issuer": "issuer"
+          },
+          "return": "client"
+        },
+        {
+          "method": "do_provider_info",
+          "args": {
+            "client": "client"
+          }
+        },
+        {
+          "method": "do_client_registration",
+          "args": {
+            "client": "client"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-request-uri-signed-rs256": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer"
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-request-uri-signed-none": {},
+    "oidcc-client-test-idtoken-sig-none": {},
+    "oidcc-client-test-signing-key-rotation-just-before-signing": {},
+    "oidcc-client-test-signing-key-rotation": {},
+    "oidcc-client-test-userinfo-signed": {}
+  }
+}
