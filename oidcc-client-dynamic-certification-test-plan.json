@@ -3,6 +3,7 @@
   "default_config": "config.json",
   "base_url": "{BASE_URL}",
   "acct": "idpy.oidcc-client-test-discovery-webfinger-acct@www.certification.openid.net",
+  "resource_uri": "https://www.certification.openid.net/idpy/oidcc-client-test-discovery-webfinger-url",
   "test": {
     "oidcc-client-test-discovery-webfinger-acct": {
       "sequence": [
@@ -26,7 +27,7 @@
         {
           "method": "do_webfinger",
           "args": {
-            "user": "acct"
+            "user": "resource_uri"
           },
           "return": "client"
         },
