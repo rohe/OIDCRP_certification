@@ -12,17 +12,29 @@
             "user": "acct"
           },
           "return": "client"
+        },
+        {
+          "method": "do_provider_info",
+          "args": {
+            "client": "client"
+          }
         }
       ]
     },
     "oidcc-client-test-discovery-webfinger-url": {
       "sequence": [
         {
-          "method": "init_client",
+          "method": "do_webfinger",
           "args": {
-            "issuer": "issuer"
+            "user": "acct"
           },
           "return": "client"
+        },
+        {
+          "method": "do_provider_info",
+          "args": {
+            "client": "client"
+          }
         }
       ]
     },
