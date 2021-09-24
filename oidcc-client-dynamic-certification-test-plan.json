@@ -187,7 +187,11 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "behaviour_args": {
+              "request_param": "request_uri",
+              "request_object_signing_alg": "RS256"
+            }
           },
           "return": "authn_request"
         },
@@ -205,7 +209,11 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "behaviour_args": {
+              "request_param": "request_uri",
+              "request_object_signing_alg": "RS256"
+            }
           },
           "return": "authn_request"
         },
@@ -237,7 +245,11 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "behaviour_args": {
+              "request_param": "request_uri",
+              "request_object_signing_alg": "RS256"
+            }
           },
           "return": "authn_request"
         },
