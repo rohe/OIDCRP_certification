@@ -54,6 +54,10 @@
     "read_only": false
   },
   "services": {
+    "webfinger": {
+      "class": "oidcrp.oidc.webfinger.WebFinger",
+      "kwargs": {}
+    },
     "discovery": {
       "class": "oidcrp.oidc.provider_info_discovery.ProviderInfoDiscovery",
       "kwargs": {}
@@ -104,6 +108,10 @@
       },
       "redirect_uris": [],
       "services": {
+        "webfinger": {
+          "class": "oidcrp.oidc.webfinger.WebFinger",
+          "kwargs": {}
+        },
         "discovery": {
           "class": "oidcrp.oidc.provider_info_discovery.ProviderInfoDiscovery",
           "kwargs": {}

@@ -2,7 +2,6 @@
 import argparse
 import json
 import os
-import sys
 
 from flask import Flask
 from oidcrp.util import create_context

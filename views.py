@@ -123,7 +123,12 @@ def test():
     _config = Configuration(_cnf, entity_conf=[{"class": RPConfiguration, "attr": "rp"}])
 
     current_app.rph = init_oidc_rp_handler(_config.rp)
-    current_app.info = {"issuer": issuer, "step": 0, "test_id": test_id}
+    current_app.info = {"step": 0, "test_id": test_id}
+
+    for key, val in current_app.test_plan.items():
+        if key == "test":
+            continue
+        current_app.info[key] = val
 
     return test_sequence()
 
