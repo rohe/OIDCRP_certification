@@ -135,10 +135,117 @@
         }
       ]
     },
-    "oidcc-client-test-request-uri-signed-none": {},
-    "oidcc-client-test-idtoken-sig-none": {},
-    "oidcc-client-test-signing-key-rotation-just-before-signing": {},
-    "oidcc-client-test-signing-key-rotation": {},
-    "oidcc-client-test-userinfo-signed": {}
+    "oidcc-client-test-request-uri-signed-none": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "behaviour_args": {
+              "request_param": "request_uri",
+              "request_object_signing_alg": "none"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-idtoken-sig-none": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer"
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response",
+            "behaviour_args": {
+              "id_token_signed_response_alg": "none"
+            }
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-signing-key-rotation-just-before-signing": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer"
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-signing-key-rotation": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer"
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        },
+        {
+          "method": "init_authorization",
+          "args": {
+            "client": "client"
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-userinfo-signed": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer"
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    }
   }
 }
+
