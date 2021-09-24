@@ -162,7 +162,10 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "behaviour_args": {
+              "request_param": "request_uri"
+            }
           },
           "return": "authn_request"
         },
@@ -172,7 +175,6 @@
             "issuer": "issuer",
             "response": "response",
             "behaviour_args": {
-              "request_param": "request_uri",
               "id_token_signed_response_alg": "none"
             }
           }
