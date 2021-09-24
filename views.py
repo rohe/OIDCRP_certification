@@ -78,6 +78,7 @@ def test_sequence():
         _func = getattr(current_app.rph, spec["method"])
         _kwargs = {k: current_app.info[v] for k, v in spec.get("args", {}).items()}
 
+        logger.debug(f"Func: {_func}, kwargs:{_kwargs}")
         try:
             _res = _func(**_kwargs)
         except OidcServiceError as err:
