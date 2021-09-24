@@ -164,7 +164,8 @@
           "args": {
             "issuer_id": "issuer",
             "behaviour_args": {
-              "request_param": "request_uri"
+              "request_param": "request_uri",
+              "request_object_signing_alg": "RS256"
             }
           },
           "return": "authn_request"
