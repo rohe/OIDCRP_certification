@@ -76,7 +76,12 @@ def test_sequence():
     for spec in _desc["sequence"][step:]:
         current_app.info["step"] += 1
         _func = getattr(current_app.rph, spec["method"])
-        _kwargs = {k: current_app.info[v] for k, v in spec.get("args", {}).items()}
+        _kwargs = {}
+        for k, v in spec.get("args", {}).items():
+            if isinstance(v, str) and v in current_app.info:
+                _kwargs[k] = current_app.info[v]
+            else:
+                _kwargs[k] = v
 
         logger.debug(f"Func: {_func}, kwargs:{_kwargs}")
         try:
