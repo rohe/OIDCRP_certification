@@ -172,6 +172,7 @@
             "issuer": "issuer",
             "response": "response",
             "behaviour_args": {
+              "request_param": "request_uri",
               "id_token_signed_response_alg": "none"
             }
           }

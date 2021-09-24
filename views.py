@@ -93,7 +93,7 @@ def test_sequence():
             _res = _func(**_kwargs)
         except OidcServiceError as err:
             logger.error(f"{err}")
-            _res = None
+            return index()
 
         if _res and "return" in spec:
             current_app.info[spec["return"]] = _res
