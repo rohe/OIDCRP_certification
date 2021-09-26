@@ -221,6 +221,25 @@
         }
       ]
     },
+    "oidcc-client-test-scope-userinfo-claims": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {"scope":  ["profile", "openid"]}
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
     "oidcc-client-test-client-secret-basic": {
       "sequence": [
         {
