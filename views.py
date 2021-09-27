@@ -194,7 +194,7 @@ def repost_fragment():
     return after_authn(args)
 
 
-@oidc_rp_views.route('/ihf_cb')
+@oidc_rp_views.route('/authz_im_cb')
 def ihf_cb(self, op_identifier='', **kwargs):
     logger.debug('implicit_hybrid_flow kwargs: {}'.format(kwargs))
     return render_template('repost_fragment.html')
