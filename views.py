@@ -188,7 +188,7 @@ def handle_bad_request(e):
     return 'bad request!', 400
 
 
-@oidc_rp_views.route('/repost_fragment')
+@oidc_rp_views.route('/repost_fragment', methods=['POST'])
 def repost_fragment():
     args = compact(parse_qs(request.args['url_fragment']))
     return after_authn(args)
