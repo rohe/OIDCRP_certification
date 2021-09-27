@@ -164,7 +164,7 @@ def get_rp(op_identifier):
 
 
 def after_authn(request_args):
-    logger.debug(f"{request_args}")
+    logger.debug(f"after_authn: {request_args}")
     rp = current_app.info["client"]
 
     if hasattr(rp, 'status_code') and rp.status_code != 200:
@@ -177,20 +177,9 @@ def after_authn(request_args):
     return test_sequence()
 
 
-# def get_op_identifier_by_cb_uri(url: str):
-#     uri = urljoin(url, urlparse(url).path)
-#     for k, v in current_app.rph.issuer2rp.items():
-#         _cntx = v.get_service_context()
-#         for endpoint in ("redirect_uris",
-#                          "post_logout_redirect_uris",
-#                          "frontchannel_logout_uri",
-#                          "backchannel_logout_uri"):
-#             if uri in _cntx.get(endpoint, []):
-#                 return k
-
-
 @oidc_rp_views.route('/authz_cb/<op_identifier>')
 def authz_cb(op_identifier):
+    logger.debug(f"Authz url: {request.url}")
     return after_authn(request.args)
 
 
