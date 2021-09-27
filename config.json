@@ -92,7 +92,12 @@
           "ops@example.com"
         ],
         "response_types": [
-          "code"
+          "code",
+          "code id_token",
+          "code id_token token",
+          "id_token token",
+          "id_token",
+          "code token"
         ],
         "scope": [
           "openid",

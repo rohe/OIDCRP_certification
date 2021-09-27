@@ -190,15 +190,14 @@ def handle_bad_request(e):
 
 @oidc_rp_views.route('/repost_fragment', methods=['POST'])
 def repost_fragment():
-    logger.debug(f"@Repost fragment: {request.args}")
-    args = compact(parse_qs(request.args['url_fragment']))
+    logger.debug(f"@Repost fragment: {request.form}")
+    args = compact(parse_qs(request.form['url_fragment']))
     return after_authn(args)
 
 
 @oidc_rp_views.route('/authz_im_cb/<op_identifier>')
 def ihf_cb(op_identifier='', **kwargs):
-    logger.debug('implicit_hybrid_flow kwargs: {}'.format(kwargs))
-    return render_template('repost_fragment.html')
+    return render_template('repost_fragment.html', op_hash=op_identifier)
 
 
 @oidc_rp_views.route('/session_iframe')
