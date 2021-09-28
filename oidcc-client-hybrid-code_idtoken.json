@@ -375,10 +375,12 @@
           "method": "begin",
           "args": {
             "issuer_id": "issuer",
-            "response_type": [
-              "code",
-              "id_token"
-            ]
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token"
+              ]
+            }
           },
           "return": "authn_request"
         },
