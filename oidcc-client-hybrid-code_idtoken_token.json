@@ -14,7 +14,8 @@
             "req_args": {
               "response_type": [
                 "code",
-                "id_token"
+                "id_token",
+                "token"
               ]
             }
           },
@@ -38,7 +39,8 @@
             "req_args": {
               "response_type": [
                 "code",
-                "id_token"
+                "id_token",
+                "token"
               ]
             }
           },
@@ -62,7 +64,8 @@
             "req_args": {
               "response_type": [
                 "code",
-                "id_token"
+                "id_token",
+                "token"
               ]
             }
           },
@@ -86,7 +89,8 @@
             "req_args": {
               "response_type": [
                 "code",
-                "id_token"
+                "id_token",
+                "token"
               ]
             }
           },
@@ -110,7 +114,8 @@
             "req_args": {
               "response_type": [
                 "code",
-                "id_token"
+                "id_token",
+                "token"
               ]
             }
           },
@@ -134,8 +139,9 @@
             "req_args": {
               "response_type": [
                 "code",
-                "id_token"
-              ]
+                "id_token",
+                "token"
+                             ]
             }
           },
           "return": "authn_request"
@@ -158,8 +164,9 @@
             "req_args": {
               "response_type": [
                 "code",
-                "id_token"
-              ]
+                "id_token",
+                "token"
+                             ]
             }
           },
           "return": "authn_request"
@@ -182,8 +189,9 @@
             "req_args": {
               "response_type": [
                 "code",
-                "id_token"
-              ]
+                "id_token",
+                "token"
+                             ]
             }
           },
           "return": "authn_request"
@@ -206,8 +214,9 @@
             "req_args": {
               "response_type": [
                 "code",
-                "id_token"
-              ]
+                "id_token",
+                "token"
+                             ]
             }
           },
           "return": "authn_request"
@@ -230,8 +239,9 @@
             "req_args": {
               "response_type": [
                 "code",
-                "id_token"
-              ]
+                "id_token",
+                "token"
+                             ]
             }
           },
           "return": "authn_request"
@@ -245,7 +255,7 @@
         }
       ]
     },
-    "oidcc-client-test-idtoken-sig-none": {
+    "idcc-client-test-invalid-sig-rs256": {
       "sequence": [
         {
           "method": "begin",
@@ -254,32 +264,9 @@
             "req_args": {
               "response_type": [
                 "code",
-                "id_token"
-              ]
-            }
-          },
-          "return": "authn_request"
-        },
-        {
-          "method": "finalize",
-          "args": {
-            "issuer": "issuer",
-            "response": "response"
-          }
-        }
-      ]
-    },
-    "oidcc-client-test-invalid-sig-rs256": {
-      "sequence": [
-        {
-          "method": "begin",
-          "args": {
-            "issuer_id": "issuer",
-            "req_args": {
-              "response_type": [
-                "code",
-                "id_token"
-              ]
+                "id_token",
+                "token"
+                             ]
             }
           },
           "return": "authn_request"
@@ -302,8 +289,34 @@
             "req_args": {
               "response_type": [
                 "code",
-                "id_token"
-              ]
+                "id_token",
+                "token"
+                             ]
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-nonce-unless-code-flow": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token",
+                "token"
+                             ]
             }
           },
           "return": "authn_request"
@@ -326,8 +339,9 @@
             "req_args": {
               "response_type": [
                 "code",
-                "id_token"
-              ]
+                "id_token",
+                "token"
+                             ]
             }
           },
           "return": "authn_request"
@@ -354,8 +368,9 @@
               ],
               "response_type": [
                 "code",
-                "id_token"
-              ]
+                "id_token",
+                "token"
+                             ]
             }
           },
           "return": "authn_request"
