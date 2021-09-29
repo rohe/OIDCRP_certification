@@ -122,6 +122,11 @@
             "behaviour_args": {
               "request_param": "request_uri",
               "request_object_signing_alg": "RS256"
+            },
+            "req_args": {
+              "response_type": [
+                "code"
+              ]
             }
           },
           "return": "authn_request"
@@ -141,6 +146,11 @@
           "method": "begin",
           "args": {
             "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code"
+              ]
+            },
             "behaviour_args": {
               "request_param": "request_uri",
               "request_object_signing_alg": "none"
@@ -163,6 +173,11 @@
           "method": "begin",
           "args": {
             "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code"
+              ]
+            },
             "behaviour_args": {
               "request_param": "request_uri",
               "request_object_signing_alg": "RS256"
@@ -188,6 +203,11 @@
           "method": "begin",
           "args": {
             "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code"
+              ]
+            },
             "behaviour_args": {
               "request_param": "request_uri",
               "request_object_signing_alg": "RS256"
@@ -210,6 +230,11 @@
           "method": "begin",
           "args": {
             "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code"
+              ]
+            },
             "behaviour_args": {
               "request_param": "request_uri",
               "request_object_signing_alg": "RS256"
@@ -228,6 +253,11 @@
           "method": "init_authorization",
           "args": {
             "client": "client",
+            "req_args": {
+              "response_type": [
+                "code"
+              ]
+            },
             "behaviour_args": {
               "request_param": "request_uri",
               "request_object_signing_alg": "RS256"
@@ -250,6 +280,11 @@
           "method": "begin",
           "args": {
             "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code"
+              ]
+            },
             "behaviour_args": {
               "request_param": "request_uri",
               "request_object_signing_alg": "RS256"
