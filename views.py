@@ -96,6 +96,7 @@ def test_sequence():
             if _expected_error:
                 for _err, _val in _expected_error.items():
                     if err.__class__.__name__ == _err and _val in str(err):
+                        logger.error(f"Got expected: {err}")
                         return index()
             logger.error(f"{err}")
             return index()
