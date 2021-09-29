@@ -51,6 +51,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "ValueError": "Unknown issuer"
           }
         }
       ]
@@ -141,7 +144,7 @@
                 "code",
                 "id_token",
                 "token"
-                             ]
+              ]
             }
           },
           "return": "authn_request"
@@ -166,7 +169,7 @@
                 "code",
                 "id_token",
                 "token"
-                             ]
+              ]
             }
           },
           "return": "authn_request"
@@ -191,7 +194,7 @@
                 "code",
                 "id_token",
                 "token"
-                             ]
+              ]
             }
           },
           "return": "authn_request"
@@ -216,7 +219,7 @@
                 "code",
                 "id_token",
                 "token"
-                             ]
+              ]
             }
           },
           "return": "authn_request"
@@ -241,7 +244,7 @@
                 "code",
                 "id_token",
                 "token"
-                             ]
+              ]
             }
           },
           "return": "authn_request"
@@ -266,7 +269,7 @@
                 "code",
                 "id_token",
                 "token"
-                             ]
+              ]
             }
           },
           "return": "authn_request"
@@ -291,7 +294,7 @@
                 "code",
                 "id_token",
                 "token"
-                             ]
+              ]
             }
           },
           "return": "authn_request"
@@ -305,7 +308,7 @@
         }
       ]
     },
-    "idcc-client-test-invalid-sig-rs256": {
+    "oidcc-client-test-invalid-sig-rs256": {
       "sequence": [
         {
           "method": "begin",
@@ -316,7 +319,7 @@
                 "code",
                 "id_token",
                 "token"
-                             ]
+              ]
             }
           },
           "return": "authn_request"
@@ -341,7 +344,7 @@
                 "code",
                 "id_token",
                 "token"
-                             ]
+              ]
             }
           },
           "return": "authn_request"
@@ -366,7 +369,7 @@
                 "code",
                 "id_token",
                 "token"
-                             ]
+              ]
             }
           },
           "return": "authn_request"
@@ -391,7 +394,7 @@
                 "code",
                 "id_token",
                 "token"
-                             ]
+              ]
             }
           },
           "return": "authn_request"
@@ -420,7 +423,7 @@
                 "code",
                 "id_token",
                 "token"
-                             ]
+              ]
             }
           },
           "return": "authn_request"
@@ -440,10 +443,12 @@
           "method": "begin",
           "args": {
             "issuer_id": "issuer",
-            "response_type": [
-              "code",
-              "id_token"
-            ]
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token"
+              ]
+            }
           },
           "return": "authn_request"
         },
