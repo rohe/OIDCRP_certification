@@ -221,7 +221,7 @@
         }
       ]
     },
-    "idcc-client-test-invalid-sig-rs256": {
+    "oidcc-client-test-invalid-sig-rs256": {
       "sequence": [
         {
           "method": "begin",
@@ -363,10 +363,12 @@
           "method": "begin",
           "args": {
             "issuer_id": "issuer",
-            "response_type": [
-              "code",
-              "token"
-            ]
+            "req_args": {
+              "response_type": [
+                "code",
+                "token"
+              ]
+            }
           },
           "return": "authn_request"
         },
