@@ -95,7 +95,7 @@ def test_sequence():
             _expected_error = spec.get("expected_error")
             if _expected_error:
                 for _err, _val in _expected_error.items():
-                    if err.__name__ == _err and _val in str(err):
+                    if err.__class__.__name__ == _err and _val in str(err):
                         return index()
             logger.error(f"{err}")
             return index()
