@@ -11,8 +11,8 @@
     A list of available tests for a specific test plan.
 </p>
 <h2>Chose one of the tests</h2>
-{% for test in tests %}
-<a href="{{ base_url }}/test?test_id={{ test }}">{{ test }}</a><br>
+{% for test,result in tests.items() %}
+  {{ result }}&nbsp&nbsp<a href="{{ base_url }}/test?test_id={{ test }}">{{ test }}</a><br>
 {% endfor %}
 </body>
 </html>

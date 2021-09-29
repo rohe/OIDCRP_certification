@@ -44,6 +44,9 @@ if __name__ == "__main__":
     context = create_context(dir_path, _web_conf)
 
     app = app_setup('oidc_rp')
+    app.test_plan_name = args.test_plan
     app.test_plan = _test_plan
+    app.test_result = {test: '_' for test in list(_test_plan["test"].keys())}
+
     app.run(host=_web_conf["domain"], port=_web_conf["port"],
             debug=_web_conf.get("debug", False), ssl_context=context)

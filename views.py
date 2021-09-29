@@ -17,7 +17,6 @@ from flask.helpers import send_from_directory
 from oidcrp import rp_handler
 from oidcrp.configure import Configuration
 from oidcrp.configure import RPConfiguration
-from oidcrp.exception import OidcServiceError
 from oidcrp.rp_handler import RPHandler
 import werkzeug
 
@@ -68,9 +67,9 @@ def send_request_js(path):
 
 @oidc_rp_views.route('/')
 def index():
-    _tests = list(current_app.test_plan["test"].keys())
-    return render_template('test_choice.html', tests=_tests,
-                           base_url=current_app.test_plan["base_url"])
+    return render_template('test_choice.html', tests=current_app.test_result,
+                           base_url=current_app.test_plan["base_url"],
+                           test_plan=current_app.test_plan_name)
 
 
 def test_sequence():
@@ -97,8 +96,10 @@ def test_sequence():
                 for _err, _val in _expected_error.items():
                     if err.__class__.__name__ == _err and _val in str(err):
                         logger.error(f"Got expected: {err}")
+                        current_app.test_result[test_id] = "(+)"
                         return index()
             logger.error(f"{err}")
+            current_app.test_result[test_id] = "-"
             return index()
 
         if _res and "return" in spec:
@@ -115,6 +116,7 @@ def test_sequence():
             return response
 
     # back to start page
+    current_app.test_result[test_id] = "+"
     return index()
 
 
