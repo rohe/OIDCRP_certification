@@ -446,7 +446,8 @@
             "req_args": {
               "response_type": [
                 "code",
-                "id_token"
+                "id_token",
+                "token"
               ]
             }
           },
