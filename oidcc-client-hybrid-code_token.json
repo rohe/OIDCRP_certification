@@ -52,6 +52,9 @@
             "behaviour_args": {
               "collect_id_token": "True"
             }
+          },
+          "expected_error": {
+            "ValueError": "Unknown issuer"
           }
         }
       ]
@@ -75,7 +78,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
@@ -99,7 +105,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
@@ -123,7 +132,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
@@ -147,7 +159,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
@@ -163,6 +178,9 @@
                 "code",
                 "token"
               ]
+            },
+            "behaviour_args": {
+              "collect_id_token": "True"
             }
           },
           "return": "authn_request"
@@ -195,7 +213,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
@@ -219,7 +240,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
@@ -243,7 +267,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
@@ -267,7 +294,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
@@ -291,7 +321,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
@@ -341,7 +374,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]

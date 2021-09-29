@@ -91,7 +91,12 @@ def test_sequence():
         logger.debug(f"Func: {_func}, kwargs:{_kwargs}")
         try:
             _res = _func(**_kwargs)
-        except OidcServiceError as err:
+        except Exception as err:
+            _expected_error = spec.get("expected_error")
+            if _expected_error:
+                for _err, _val in _expected_error.items():
+                    if err.__name__ == _err and _val in str(err):
+                        return index()
             logger.error(f"{err}")
             return index()
 
