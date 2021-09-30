@@ -59,7 +59,10 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": "code"
+            }
           },
           "return": "authn_request"
         },
@@ -77,7 +80,10 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": "code"
+            }
           },
           "return": "authn_request"
         },
@@ -95,7 +101,10 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": "code"
+            }
           },
           "return": "authn_request"
         },
@@ -109,7 +118,10 @@
         {
           "method": "init_authorization",
           "args": {
-            "client": "client"
+            "client": "client",
+            "req_args": {
+              "response_type": "code"
+            }
           },
           "return": "authn_request"
         },
