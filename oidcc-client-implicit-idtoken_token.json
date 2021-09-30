@@ -368,30 +368,6 @@
           }
         }
       ]
-    },
-    "oidcc-client-test-client-secret-basic": {
-      "sequence": [
-        {
-          "method": "begin",
-          "args": {
-            "issuer_id": "issuer",
-            "req_args": {
-              "response_type": [
-                "id_token",
-                "token"
-              ]
-            }
-          },
-          "return": "authn_request"
-        },
-        {
-          "method": "finalize",
-          "args": {
-            "issuer": "issuer",
-            "response": "response"
-          }
-        }
-      ]
     }
   }
 }
