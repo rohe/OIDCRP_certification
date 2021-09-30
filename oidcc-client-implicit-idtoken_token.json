@@ -173,7 +173,7 @@
         }
       ]
     },
-    "oidcc-client-test-invalid-chash": {
+    "oidcc-client-test-invalid-athash": {
       "sequence": [
         {
           "method": "begin",
@@ -197,7 +197,7 @@
         }
       ]
     },
-    "oidcc-client-test-missing-chash": {
+    "oidcc-client-test-missing-athash": {
       "sequence": [
         {
           "method": "begin",
