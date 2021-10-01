@@ -224,6 +224,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "CHashError": ""
           }
         }
       ]
@@ -250,6 +253,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "MissingRequiredAttribute": "c_hash"
           }
         }
       ]
@@ -276,6 +282,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "ATHashError": ""
           }
         }
       ]
@@ -302,6 +311,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "MissingRequiredAttribute": "at_hash"
           }
         }
       ]
