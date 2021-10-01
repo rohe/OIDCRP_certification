@@ -25,7 +25,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
@@ -50,7 +53,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           },
           "expected_error": {
             "ValueError": "Unknown issuer"
@@ -78,7 +84,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           },
           "expected_error": {
             "MissingRequiredAttribute": "sub"
@@ -106,7 +115,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           },
           "expected_error": {
             "NotForMe": ""
@@ -134,7 +146,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           },
           "expected_error": {
             "MissingRequiredAttribute": "iat"
@@ -162,7 +177,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
@@ -187,7 +205,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           },
           "expected_error": {
             "MissingSigningKey": ""
@@ -215,7 +236,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           },
           "expected_error": {
             "CHashError": ""
@@ -243,7 +267,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           },
           "expected_error": {
             "MissingRequiredAttribute": "c_hash"
@@ -271,7 +298,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
@@ -296,7 +326,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           },
           "expected_error": {
             "BadSignature": ""
@@ -324,7 +357,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           },
           "expected_error": {
             "ValueError": "sub"
@@ -352,7 +388,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
@@ -377,7 +416,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           },
           "expected_error": {
             "ValueError": "nonce"
@@ -409,7 +451,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
@@ -434,7 +479,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
           }
         }
       ]
