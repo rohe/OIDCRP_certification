@@ -216,6 +216,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "AtHashError": ""
           }
         }
       ]
@@ -241,6 +244,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "MissingRequiredAttribute": "at_hash"
           }
         }
       ]
