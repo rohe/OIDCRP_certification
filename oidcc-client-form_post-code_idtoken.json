@@ -209,9 +209,6 @@
               "response_mode": "form_post"
             }
           },
-          "expected_error": {
-            "CHashError": ""
-          },
           "return": "authn_request"
         },
         {
@@ -219,6 +216,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "CHashError": ""
           }
         }
       ]
@@ -237,9 +237,6 @@
               "response_mode": "form_post"
             }
           },
-          "expected_error": {
-            "MissingRequiredAttribute": "c_hash"
-          },
           "return": "authn_request"
         },
         {
@@ -247,6 +244,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "MissingRequiredAttribute": "c_hash"
           }
         }
       ]
@@ -315,9 +315,6 @@
               "response_mode": "form_post"
             }
           },
-          "expected_error": {
-            "BadSignature": ""
-          },
           "return": "authn_request"
         },
         {
@@ -325,6 +322,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "BadSignature": ""
           }
         }
       ]
@@ -343,9 +343,6 @@
               "response_mode": "form_post"
             }
           },
-          "expected_error": {
-            "ValueError": "sub"
-          },
           "return": "authn_request"
         },
         {
@@ -353,6 +350,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "ValueError": "sub"
           }
         }
       ]
