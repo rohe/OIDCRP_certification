@@ -202,6 +202,110 @@
         }
       ]
     },
+    "oidcc-client-test-invalid-chash": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token",
+                "token"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-missing-chash": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token",
+                "token"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-invalid-athash": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token",
+                "token"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-missing-athash": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token",
+                "token"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
     "oidcc-client-test-idtoken-sig-rs256": {
       "sequence": [
         {
