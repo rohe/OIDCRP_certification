@@ -1,0 +1,459 @@
+{
+  "issuer": "{ISSUER}",
+  "default_config": "config.json",
+  "base_url": "{BASE_URL}",
+  "acct": "idpy.oidcc-client-test-discovery-webfinger-acct@www.certification.openid.net",
+  "resource_uri": "https://www.certification.openid.net/idpy/oidcc-client-test-discovery-webfinger-url",
+  "test": {
+    "oidcc-client-test": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-invalid-iss": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "idtoken"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "expected_error": {
+            "ValueError": "Unknown issuer"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-missing-sub": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "idtoken"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "expected_error": {
+            "MissingRequiredAttribute": "sub"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-invalid-aud": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "idtoken"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "expected_error": {
+            "NotForMe": ""
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-missing-iat": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "idtoken"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "expected_error": {
+            "MissingRequiredAttribute": "iat"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-kid-absent-single-jwks": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "idtoken"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-kid-absent-multiple-jwks": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "idtoken"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "expected_error": {
+            "MissingSigningKey": ""
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-invalid-chash": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token"
+              ]
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-missing-chash": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token"
+              ]
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-idtoken-sig-rs256": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "idtoken"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-idtoken-sig-none": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "idtoken"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-invalid-sig-rs256": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "idtoken"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "expected_error": {
+            "BadSignature": ""
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-userinfo-invalid-sub": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "idtoken"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "expected_error": {
+            "ValueError": "sub"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-nonce-unless-code-flow": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token"
+              ]
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-nonce-invalid": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "idtoken"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "expected_error": {
+            "ValueError": "nonce"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-scope-userinfo-claims": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "scope": [
+                "profile",
+                "openid"
+              ],
+              "response_type": [
+                "code",
+                "idtoken"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-client-secret-basic": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "idtoken"
+              ],
+              "response_mode": "form_post"
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          }
+        }
+      ]
+    }
+  }
+}
+
