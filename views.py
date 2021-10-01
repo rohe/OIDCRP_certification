@@ -94,8 +94,12 @@ def test_sequence():
             _expected_error = spec.get("expected_error")
             if _expected_error:
                 for _err, _val in _expected_error.items():
-                    if err.__class__.__name__ == _err and _val in str(err):
-                        logger.error(f"Got expected: {err}")
+                    if err.__class__.__name__ == _err:
+                        logger.error(f"Got expected exception: {err}")
+                        if _val in str(err):
+                            logger.error(f"Got expected value: {_val}")
+                        else:
+                            logger.error(f"NOT expected value: {_val}")
                         current_app.test_result[test_id] = "(+)"
                         return index()
             logger.error(f"{err}")
