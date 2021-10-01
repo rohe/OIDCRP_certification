@@ -14,6 +14,7 @@
             "req_args": {
               "response_type": [
                 "code",
+                "id_token",
                 "token"
               ],
               "response_mode": "form_post"
@@ -25,10 +26,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           }
         }
       ]
@@ -42,6 +40,7 @@
             "req_args": {
               "response_type": [
                 "code",
+                "id_token",
                 "token"
               ],
               "response_mode": "form_post"
@@ -53,10 +52,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           },
           "expected_error": {
             "ValueError": "Unknown issuer"
@@ -73,6 +69,7 @@
             "req_args": {
               "response_type": [
                 "code",
+                "id_token",
                 "token"
               ],
               "response_mode": "form_post"
@@ -84,10 +81,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           },
           "expected_error": {
             "MissingRequiredAttribute": "sub"
@@ -104,6 +98,7 @@
             "req_args": {
               "response_type": [
                 "code",
+                "id_token",
                 "token"
               ],
               "response_mode": "form_post"
@@ -115,10 +110,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           },
           "expected_error": {
             "NotForMe": ""
@@ -135,6 +127,7 @@
             "req_args": {
               "response_type": [
                 "code",
+                "id_token",
                 "token"
               ],
               "response_mode": "form_post"
@@ -146,10 +139,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           },
           "expected_error": {
             "MissingRequiredAttribute": "iat"
@@ -166,6 +156,7 @@
             "req_args": {
               "response_type": [
                 "code",
+                "id_token",
                 "token"
               ],
               "response_mode": "form_post"
@@ -177,10 +168,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           }
         }
       ]
@@ -194,6 +182,7 @@
             "req_args": {
               "response_type": [
                 "code",
+                "id_token",
                 "token"
               ],
               "response_mode": "form_post"
@@ -205,10 +194,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           },
           "expected_error": {
             "MissingSigningKey": ""
@@ -225,6 +211,7 @@
             "req_args": {
               "response_type": [
                 "code",
+                "id_token",
                 "token"
               ],
               "response_mode": "form_post"
@@ -236,10 +223,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           }
         }
       ]
@@ -253,6 +237,7 @@
             "req_args": {
               "response_type": [
                 "code",
+                "id_token",
                 "token"
               ],
               "response_mode": "form_post"
@@ -264,10 +249,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           },
           "expected_error": {
             "BadSignature": ""
@@ -284,6 +266,7 @@
             "req_args": {
               "response_type": [
                 "code",
+                "id_token",
                 "token"
               ],
               "response_mode": "form_post"
@@ -295,10 +278,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           },
           "expected_error": {
             "ValueError": "sub"
@@ -315,6 +295,7 @@
             "req_args": {
               "response_type": [
                 "code",
+                "id_token",
                 "token"
               ],
               "response_mode": "form_post"
@@ -326,10 +307,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           }
         }
       ]
@@ -343,6 +321,7 @@
             "req_args": {
               "response_type": [
                 "code",
+                "id_token",
                 "token"
               ],
               "response_mode": "form_post"
@@ -354,10 +333,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           },
           "expected_error": {
             "ValueError": "nonce"
@@ -378,6 +354,7 @@
               ],
               "response_type": [
                 "code",
+                "id_token",
                 "token"
               ],
               "response_mode": "form_post"
@@ -389,10 +366,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           }
         }
       ]
@@ -406,6 +380,7 @@
             "req_args": {
               "response_type": [
                 "code",
+                "id_token",
                 "token"
               ],
               "response_mode": "form_post"
@@ -417,10 +392,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           }
         }
       ]
