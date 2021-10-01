@@ -207,6 +207,9 @@
                 "id_token"
               ],
               "response_mode": "form_post"
+            },
+            "expected_error": {
+              "CHashError": ""
             }
           },
           "return": "authn_request"
@@ -232,6 +235,9 @@
                 "id_token"
               ],
               "response_mode": "form_post"
+            },
+            "expected_error": {
+              "MissingRequiredAttribute": "c_hash"
             }
           },
           "return": "authn_request"
