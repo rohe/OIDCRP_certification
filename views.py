@@ -102,6 +102,11 @@ def test_sequence():
                             logger.error(f"NOT expected value: {_val}")
                         current_app.test_result[test_id] = "(+)"
                         return index()
+                    else:
+                        logger.error(f"Unexpected exception: {err.__class__.__name__}")
+            else:
+                logger.error(f"Not expected exception: {err.__class__.__name__}")
+
             logger.error(f"{err}")
             current_app.test_result[test_id] = "-"
             return index()
