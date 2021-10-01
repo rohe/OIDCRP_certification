@@ -326,7 +326,7 @@
             "issuer": "issuer",
             "response": "response"
           },
-          "expect_error": {
+          "expected_error": {
             "ValueError": "sub"
           }
         }
