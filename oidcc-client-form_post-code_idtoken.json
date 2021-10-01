@@ -13,7 +13,8 @@
             "issuer_id": "issuer",
             "req_args": {
               "response_type": [
-                "code"
+                "code",
+                "id_token"
               ],
               "response_mode": "form_post"
             }
@@ -38,7 +39,7 @@
             "req_args": {
               "response_type": [
                 "code",
-                "idtoken"
+                "id_token"
               ],
               "response_mode": "form_post"
             }
@@ -66,7 +67,7 @@
             "req_args": {
               "response_type": [
                 "code",
-                "idtoken"
+                "id_token"
               ],
               "response_mode": "form_post"
             }
@@ -94,7 +95,7 @@
             "req_args": {
               "response_type": [
                 "code",
-                "idtoken"
+                "id_token"
               ],
               "response_mode": "form_post"
             }
@@ -122,7 +123,7 @@
             "req_args": {
               "response_type": [
                 "code",
-                "idtoken"
+                "id_token"
               ],
               "response_mode": "form_post"
             }
@@ -150,7 +151,7 @@
             "req_args": {
               "response_type": [
                 "code",
-                "idtoken"
+                "id_token"
               ],
               "response_mode": "form_post"
             }
@@ -175,7 +176,7 @@
             "req_args": {
               "response_type": [
                 "code",
-                "idtoken"
+                "id_token"
               ],
               "response_mode": "form_post"
             }
@@ -251,7 +252,7 @@
             "req_args": {
               "response_type": [
                 "code",
-                "idtoken"
+                "id_token"
               ],
               "response_mode": "form_post"
             }
@@ -276,7 +277,7 @@
             "req_args": {
               "response_type": [
                 "code",
-                "idtoken"
+                "id_token"
               ],
               "response_mode": "form_post"
             }
@@ -301,7 +302,7 @@
             "req_args": {
               "response_type": [
                 "code",
-                "idtoken"
+                "id_token"
               ],
               "response_mode": "form_post"
             }
@@ -329,7 +330,7 @@
             "req_args": {
               "response_type": [
                 "code",
-                "idtoken"
+                "id_token"
               ],
               "response_mode": "form_post"
             }
@@ -381,7 +382,7 @@
             "req_args": {
               "response_type": [
                 "code",
-                "idtoken"
+                "id_token"
               ],
               "response_mode": "form_post"
             }
@@ -413,7 +414,7 @@
               ],
               "response_type": [
                 "code",
-                "idtoken"
+                "id_token"
               ],
               "response_mode": "form_post"
             }
@@ -438,7 +439,7 @@
             "req_args": {
               "response_type": [
                 "code",
-                "idtoken"
+                "id_token"
               ],
               "response_mode": "form_post"
             }
