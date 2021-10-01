@@ -191,6 +191,12 @@ def authz_cb(op_identifier):
     return after_authn(request.args)
 
 
+@oidc_rp_views.route('/authz_fp_cb/<op_identifier>', methods=['POST'])
+def authz_fp_cb(op_identifier):
+    logger.debug(f"Authz url: {request.url}")
+    return after_authn(request.form)
+
+
 @oidc_rp_views.errorhandler(werkzeug.exceptions.BadRequest)
 def handle_bad_request(e):
     return 'bad request!', 400
