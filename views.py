@@ -11,7 +11,6 @@ from flask import current_app
 from flask import redirect
 from flask import render_template
 from flask import request
-from flask import session
 from flask.helpers import make_response
 from flask.helpers import send_from_directory
 from oidcrp import rp_handler
@@ -123,6 +122,9 @@ def test_sequence():
         elif spec["method"] == 'init_authorization':
             response = redirect(_res['url'], 303)
             return response
+        elif spec["method"] == 'close':
+            response = redirect(_res['url'], 303)
+            return response
 
     # back to start page
     current_app.test_result[test_id] = "+"
@@ -227,14 +229,15 @@ def ihf_cb(op_identifier='', **kwargs):
 def session_iframe():  # session management
     logger.debug('session_iframe request_args: {}'.format(request.args))
 
-    _rp = get_rp(session['op_identifier'])
+    _rp = current_app.info["client"]
     _context = _rp.client_get("service_context")
     session_change_url = "{}/session_change".format(_context.base_url)
 
-    _issuer = current_app.rph.hash2issuer[session['op_identifier']]
+    _issuer = current_app.rph.hash2issuer[_rp.provider_info["issuer"]]
+    _state = current_app.info['state']
     args = {
-        'client_id': session['client_id'],
-        'session_state': session['session_state'],
+        'client_id': _rp.client_id,
+        'session_state': current_app.info['session_state'],
         'issuer': _issuer,
         'session_change_url': session_change_url
     }
@@ -245,15 +248,17 @@ def session_iframe():  # session management
 
 @oidc_rp_views.route('/session_change')
 def session_change():
-    logger.debug('session_change: {}'.format(session['op_identifier']))
-    _rp = get_rp(session['op_identifier'])
+    _rp = current_app.info["client"]
+
+    logger.debug('session_change: {}'.format(_rp.provider_info["issuer"]))
 
     # If there is an ID token send it along as a id_token_hint
     _aserv = _rp.client_get("service", 'authorization')
     request_args = {"prompt": "none"}
 
+    _state = current_app.info['state']
     request_args = _aserv.multiple_extend_request_args(
-        request_args, session['state'], ['id_token'],
+        request_args, _state, ['id_token'],
         ['auth_response', 'token_response', 'refresh_token_response'])
 
     logger.debug('session_change:request_args {}'.format(request_args))
@@ -277,14 +282,16 @@ def session_logout(op_identifier):
 @oidc_rp_views.route('/logout')
 def logout():
     logger.debug('logout')
-    _info = current_app.rph.logout(state=session['state'])
+    _state = current_app.info['state']
+    _info = current_app.rph.logout(state=_state)
     logger.debug('logout redirect to "{}"'.format(_info['url']))
     return redirect(_info['url'], 303)
 
 
 @oidc_rp_views.route('/bc_logout/<op_identifier>', methods=['GET', 'POST'])
 def backchannel_logout(op_identifier):
-    _rp = get_rp(op_identifier)
+    logger.debug("Backchannel Logout endpoint")
+    _rp = current_app.info["client"]
     try:
         _state = rp_handler.backchannel_logout(_rp, request.data)
     except Exception as err:
@@ -297,7 +304,7 @@ def backchannel_logout(op_identifier):
 
 @oidc_rp_views.route('/fc_logout/<op_identifier>', methods=['GET', 'POST'])
 def frontchannel_logout(op_identifier):
-    _rp = get_rp(op_identifier)
+    _rp = current_app.info["client"]
     sid = request.args['sid']
     _iss = request.args['iss']
     if _iss != _rp.client_get("service_context").get('issuer'):

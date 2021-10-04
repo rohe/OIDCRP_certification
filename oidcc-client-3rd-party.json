@@ -1,0 +1,32 @@
+{
+  "issuer": "{ISSUER}",
+  "default_config": "config.json",
+  "base_url": "{BASE_URL}",
+  "acct": "idpy.oidcc-client-test-discovery-webfinger-acct@www.certification.openid.net",
+  "resource_uri": "https://www.certification.openid.net/idpy/oidcc-client-test-discovery-webfinger-url",
+  "test": {
+    "oidcc-client-test-dynamic-registration": {
+      "sequence": [
+        {
+          "method": "init_client",
+          "args": {
+            "issuer": "issuer"
+          },
+          "return": "client"
+        },
+        {
+          "method": "do_provider_info",
+          "args": {
+            "client": "client"
+          }
+        },
+        {
+          "method": "do_client_registration",
+          "args": {
+            "client": "client"
+          }
+        }
+      ]
+    }
+  }
+}

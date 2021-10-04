@@ -1,0 +1,36 @@
+{
+  "issuer": "{ISSUER}",
+  "default_config": "config.json",
+  "base_url": "{BASE_URL}",
+  "acct": "idpy.oidcc-client-test-discovery-webfinger-acct@www.certification.openid.net",
+  "resource_uri": "https://www.certification.openid.net/idpy/oidcc-client-test-discovery-webfinger-url",
+  "test": {
+    "oidcc-client-test-rp-init-logout": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer"
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "return": "final"
+        },
+        {
+          "method": "close",
+          "args": {
+            "issuer": "issuer",
+            "state": "state"
+          }
+        }
+      ]
+    }
+  }
+}
+
