@@ -110,7 +110,7 @@
           "client_secret_basic",
           "client_secret_post"
         ],
-        "backchannel_logout_usable": "true"
+        "backchannel_logout_usable": true
       },
       "redirect_uris": [],
       "services": {
