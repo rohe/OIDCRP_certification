@@ -54,6 +54,12 @@ def init_oidc_rp_handler(rp_config):
     return rph
 
 
+def get_post_logout_redirect_uri():
+    client = current_app.info["client"]
+    _context = client.client_get("service_context")
+    return _context.registration_response.get("post_logout_redirect_uri")
+
+
 @oidc_rp_views.route('/static/<path:path>')
 def send_js(path):
     return send_from_directory('static', path)
@@ -85,6 +91,9 @@ def test_sequence():
                 _kwargs[k] = current_app.info[v]
             else:
                 _kwargs[k] = v
+
+        if spec["method"] == "close":
+            _kwargs["post_logout_redirect_uri"] = get_post_logout_redirect_uri()
 
         logger.debug(f"Func: {_func}, kwargs:{_kwargs}")
         try:
