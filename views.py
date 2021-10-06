@@ -308,7 +308,10 @@ def backchannel_logout(op_identifier):
         return 'System error!', 400
     else:
         _rp.session_interface.remove_state(_state)
-        return "OK"
+        response = make_response("OK")
+        response.headers["Cache-Control"] = "no-cache, no-store"
+        response.headers["Pragma"] = "no-cache"
+        return response
 
 
 @oidc_rp_views.route('/fc_logout/<op_identifier>', methods=['GET', 'POST'])
