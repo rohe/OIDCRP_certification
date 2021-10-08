@@ -49,6 +49,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "ValueError": "Unknown issuer"
           }
         }
       ]
@@ -73,6 +76,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "MissingRequiredAttribute": "sub"
           }
         }
       ]
@@ -97,6 +103,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "NotForMe": ""
           }
         }
       ]
@@ -121,6 +130,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "MissingRequiredAttribute": "iat"
           }
         }
       ]
@@ -169,6 +181,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "MissingSigningKey": ""
           }
         }
       ]
@@ -193,6 +208,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "CHashError": ""
           }
         }
       ]
@@ -217,6 +235,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "MissingRequiredAttribute": "c_hash"
           }
         }
       ]
@@ -265,6 +286,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "BadSignature": ""
           }
         }
       ]
@@ -289,6 +313,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "ValueError": "sub"
           }
         }
       ]
@@ -337,6 +364,9 @@
           "args": {
             "issuer": "issuer",
             "response": "response"
+          },
+          "expected_error": {
+            "ValueError": "nonce"
           }
         }
       ]
