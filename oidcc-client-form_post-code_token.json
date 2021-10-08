@@ -389,10 +389,7 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response",
-            "behaviour_args": {
-              "collect_id_token": "True"
-            }
+            "response": "response"
           }
         }
       ]

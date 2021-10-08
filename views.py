@@ -297,12 +297,12 @@ def logout():
     return redirect(_info['url'], 303)
 
 
-@oidc_rp_views.route('/bc_logout/<op_identifier>', methods=['GET', 'POST'])
+@oidc_rp_views.route('/bc_logout/<op_identifier>', methods=['POST'])
 def backchannel_logout(op_identifier):
     logger.debug("Backchannel Logout endpoint")
     _rp = current_app.info["client"]
     try:
-        _state = rp_handler.backchannel_logout(_rp, request.data)
+        _state = rp_handler.backchannel_logout(_rp, request_args=request.form)
     except Exception as err:
         logger.error('Exception: {}'.format(err))
         return 'System error!', 400

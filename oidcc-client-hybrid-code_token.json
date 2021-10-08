@@ -82,6 +82,9 @@
             "behaviour_args": {
               "collect_id_token": "True"
             }
+          },
+          "expected_error": {
+            "MissingRequiredAttribute": "sub"
           }
         }
       ]
@@ -109,6 +112,9 @@
             "behaviour_args": {
               "collect_id_token": "True"
             }
+          },
+          "expected_error": {
+            "NotForMe": ""
           }
         }
       ]
@@ -136,6 +142,9 @@
             "behaviour_args": {
               "collect_id_token": "True"
             }
+          },
+          "expected_error": {
+            "MissingRequiredAttribute": "iat"
           }
         }
       ]
@@ -189,7 +198,13 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_id_token": "True"
+            }
+          },
+          "expected_error": {
+            "MissingSigningKey": ""
           }
         }
       ]
@@ -244,6 +259,9 @@
             "behaviour_args": {
               "collect_id_token": "True"
             }
+          },
+          "expected_error": {
+            "BadSignature": ""
           }
         }
       ]
@@ -271,6 +289,9 @@
             "behaviour_args": {
               "collect_id_token": "True"
             }
+          },
+          "expected_error": {
+            "ValueError": "sub"
           }
         }
       ]
@@ -325,6 +346,9 @@
             "behaviour_args": {
               "collect_id_token": "True"
             }
+          },
+          "expected_error": {
+            "ValueError": "nonce"
           }
         }
       ]
