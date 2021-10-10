@@ -50,7 +50,7 @@
             "issuer": "issuer",
             "response": "response",
             "behaviour_args": {
-              "collect_id_token": "True"
+              "collect_tokens": "True"
             }
           },
           "expected_error": {
@@ -80,7 +80,7 @@
             "issuer": "issuer",
             "response": "response",
             "behaviour_args": {
-              "collect_id_token": "True"
+              "collect_tokens": "True"
             }
           },
           "expected_error": {
@@ -110,7 +110,7 @@
             "issuer": "issuer",
             "response": "response",
             "behaviour_args": {
-              "collect_id_token": "True"
+              "collect_tokens": "True"
             }
           },
           "expected_error": {
@@ -140,7 +140,7 @@
             "issuer": "issuer",
             "response": "response",
             "behaviour_args": {
-              "collect_id_token": "True"
+              "collect_tokens": "True"
             }
           },
           "expected_error": {
@@ -170,7 +170,7 @@
             "issuer": "issuer",
             "response": "response",
             "behaviour_args": {
-              "collect_id_token": "True"
+              "collect_tokens": "True"
             }
           }
         }
@@ -189,7 +189,7 @@
               ]
             },
             "behaviour_args": {
-              "collect_id_token": "True"
+              "collect_tokens": "True"
             }
           },
           "return": "authn_request"
@@ -200,7 +200,7 @@
             "issuer": "issuer",
             "response": "response",
             "behaviour_args": {
-              "collect_id_token": "True"
+              "collect_tokens": "True"
             }
           },
           "expected_error": {
@@ -230,7 +230,7 @@
             "issuer": "issuer",
             "response": "response",
             "behaviour_args": {
-              "collect_id_token": "True"
+              "collect_tokens": "True"
             }
           }
         }
@@ -257,7 +257,7 @@
             "issuer": "issuer",
             "response": "response",
             "behaviour_args": {
-              "collect_id_token": "True"
+              "collect_tokens": "True"
             }
           },
           "expected_error": {
@@ -287,7 +287,7 @@
             "issuer": "issuer",
             "response": "response",
             "behaviour_args": {
-              "collect_id_token": "True"
+              "collect_tokens": "True"
             }
           },
           "expected_error": {
@@ -317,7 +317,7 @@
             "issuer": "issuer",
             "response": "response",
             "behaviour_args": {
-              "collect_id_token": "True"
+              "collect_tokens": "True"
             }
           }
         }
@@ -344,7 +344,7 @@
             "issuer": "issuer",
             "response": "response",
             "behaviour_args": {
-              "collect_id_token": "True"
+              "collect_tokens": "True"
             }
           },
           "expected_error": {
@@ -402,7 +402,7 @@
             "issuer": "issuer",
             "response": "response",
             "behaviour_args": {
-              "collect_id_token": "True"
+              "collect_tokens": "True"
             }
           }
         }
