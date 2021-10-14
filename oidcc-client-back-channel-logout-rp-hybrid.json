@@ -10,7 +10,13 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token"
+              ]
+            }
           },
           "return": "authn_request"
         },
@@ -27,7 +33,7 @@
           "args": {
             "issuer": "issuer",
             "state": {
-              "authn_request":"state"
+              "authn_request": "state"
             }
           }
         }
@@ -38,7 +44,13 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token"
+              ]
+            }
           },
           "return": "authn_request"
         },
@@ -55,7 +67,7 @@
           "args": {
             "issuer": "issuer",
             "state": {
-              "authn_request":"state"
+              "authn_request": "state"
             }
           },
           "expect_error": {
@@ -69,7 +81,13 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token"
+              ]
+            }
           },
           "return": "authn_request"
         },
@@ -86,7 +104,7 @@
           "args": {
             "issuer": "issuer",
             "state": {
-              "authn_request":"state"
+              "authn_request": "state"
             }
           },
           "expect_error": {
@@ -100,7 +118,13 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token"
+              ]
+            }
           },
           "return": "authn_request"
         },
@@ -117,7 +141,7 @@
           "args": {
             "issuer": "issuer",
             "state": {
-              "authn_request":"state"
+              "authn_request": "state"
             }
           },
           "expect_error": {
@@ -131,7 +155,13 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token"
+              ]
+            }
           },
           "return": "authn_request"
         },
@@ -148,7 +178,7 @@
           "args": {
             "issuer": "issuer",
             "state": {
-              "authn_request":"state"
+              "authn_request": "state"
             }
           },
           "expect_error": {
@@ -162,7 +192,13 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token"
+              ]
+            }
           },
           "return": "authn_request"
         },
@@ -179,7 +215,7 @@
           "args": {
             "issuer": "issuer",
             "state": {
-              "authn_request":"state"
+              "authn_request": "state"
             }
           },
           "expect_error": {
@@ -193,7 +229,13 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token"
+              ]
+            }
           },
           "return": "authn_request"
         },
@@ -210,7 +252,7 @@
           "args": {
             "issuer": "issuer",
             "state": {
-              "authn_request":"state"
+              "authn_request": "state"
             }
           },
           "expect_error": {
@@ -224,7 +266,13 @@
         {
           "method": "begin",
           "args": {
-            "issuer_id": "issuer"
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "id_token"
+              ]
+            }
           },
           "return": "authn_request"
         },
@@ -241,7 +289,7 @@
           "args": {
             "issuer": "issuer",
             "state": {
-              "authn_request":"state"
+              "authn_request": "state"
             }
           },
           "expect_error": {
