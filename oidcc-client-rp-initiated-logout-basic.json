@@ -32,6 +32,34 @@
           }
         }
       ]
+    },
+    "oidcc-client-test-rp-init-logout-other-state": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer"
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "return": "final"
+        },
+        {
+          "method": "close",
+          "args": {
+            "issuer": "issuer",
+            "state": {
+              "authn_request":"state"
+            }
+          }
+        }
+      ]
     }
   }
 }
