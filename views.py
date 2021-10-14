@@ -313,7 +313,8 @@ def backchannel_logout(op_identifier):
         logger.error('Exception: {}'.format(err))
         return 'System error!', 400
     else:
-        _rp.session_interface.remove_state(_state)
+        _context = _rp.client_get("service_context")
+        _context.state.remove_state(_state)
         response = make_response("OK")
         response.headers["Cache-Control"] = "no-cache, no-store"
         response.headers["Pragma"] = "no-cache"
