@@ -90,11 +90,14 @@ def test_sequence():
             if isinstance(v, str) and v in current_app.info:
                 _kwargs[k] = current_app.info[v]
             elif isinstance(v, dict):
+                _dict = {}
                 for prim, sec in v.items():
                     if isinstance(prim, str) and prim in current_app.info:
                         _kwargs[k] = current_app.info[prim].get(sec)
                     else:
-                        _kwargs[k] = v[prim].get(sec)
+                        _dict[prim] = sec
+                if _dict:
+                    _kwargs[k] = _dict
             else:
                 _kwargs[k] = v
 
