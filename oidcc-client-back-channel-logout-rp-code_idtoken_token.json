@@ -71,9 +71,6 @@
             "state": {
               "authn_request": "state"
             }
-          },
-          "expect_error": {
-            "Exception": "foo"
           }
         }
       ]
@@ -109,9 +106,6 @@
             "state": {
               "authn_request": "state"
             }
-          },
-          "expect_error": {
-            "MissingRequiredAttribute": "event"
           }
         }
       ]
@@ -147,9 +141,6 @@
             "state": {
               "authn_request": "state"
             }
-          },
-          "expect_error": {
-            "MissingRequiredAttribute": "event"
           }
         }
       ]
@@ -185,9 +176,6 @@
             "state": {
               "authn_request": "state"
             }
-          },
-          "expect_error": {
-            "MissingRequiredAttribute": "event"
           }
         }
       ]
@@ -223,9 +211,6 @@
             "state": {
               "authn_request": "state"
             }
-          },
-          "expect_error": {
-            "NotForMe": ""
           }
         }
       ]
@@ -261,9 +246,6 @@
             "state": {
               "authn_request": "state"
             }
-          },
-          "expect_error": {
-            "MissingRequiredAttribute": "event"
           }
         }
       ]
@@ -299,9 +281,6 @@
             "state": {
               "authn_request": "state"
             }
-          },
-          "expect_error": {
-            "MissingRequiredAttribute": "event"
           }
         }
       ]
