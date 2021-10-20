@@ -314,14 +314,15 @@ def backchannel_logout(op_identifier):
         _state = rp_handler.backchannel_logout(_rp, request_args=request.form)
     except Exception as err:
         logger.error('Exception: {}'.format(err))
-        return 'System error!', 400
+        response = make_response('System error!', 400)
     else:
         _context = _rp.client_get("service_context")
         _context.state.remove_state(_state)
         response = make_response("OK")
-        response.headers["Cache-Control"] = "no-cache, no-store"
-        response.headers["Pragma"] = "no-cache"
-        return response
+
+    response.headers["Cache-Control"] = "no-cache, no-store"
+    response.headers["Pragma"] = "no-cache"
+    return response
 
 
 @oidc_rp_views.route('/fc_logout/<op_identifier>', methods=['GET', 'POST'])
