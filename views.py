@@ -314,7 +314,7 @@ def backchannel_logout(op_identifier):
         _state = rp_handler.backchannel_logout(_rp, request_args=request.form)
     except Exception as err:
         logger.error('Exception: {}'.format(err))
-        response = make_response('System error!', 400)
+        response = make_response(str(err), 400)
     else:
         _context = _rp.client_get("service_context")
         _context.state.remove_state(_state)
