@@ -1,0 +1,303 @@
+{
+  "issuer": "{ISSUER}",
+  "default_config": "bc_config.json",
+  "base_url": "{BASE_URL}",
+  "acct": "idpy.oidcc-client-test-discovery-webfinger-acct@www.certification.openid.net",
+  "resource_uri": "https://www.certification.openid.net/idpy/oidcc-client-test-discovery-webfinger-url",
+  "test": {
+    "oidcc-client-test-rp-backchannel-rpinitlogout": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "token"
+              ]
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "return": "final"
+        },
+        {
+          "method": "close",
+          "args": {
+            "issuer": "issuer",
+            "state": {
+              "authn_request": "state"
+            }
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-rp-backchannel-rpinitlogout-alg-none": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "token"
+              ]
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "return": "final"
+        },
+        {
+          "method": "close",
+          "args": {
+            "issuer": "issuer",
+            "state": {
+              "authn_request": "state"
+            }
+          },
+          "expect_error": {
+            "Exception": "foo"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-rp-backchannel-rpinitlogout-no-event": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "token"
+              ]
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "return": "final"
+        },
+        {
+          "method": "close",
+          "args": {
+            "issuer": "issuer",
+            "state": {
+              "authn_request": "state"
+            }
+          },
+          "expect_error": {
+            "MissingRequiredAttribute": "event"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-rp-backchannel-rpinitlogout-with-nonce": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "token"
+              ]
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "return": "final"
+        },
+        {
+          "method": "close",
+          "args": {
+            "issuer": "issuer",
+            "state": {
+              "authn_request": "state"
+            }
+          },
+          "expect_error": {
+            "MissingRequiredAttribute": "event"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-rp-backchannel-rpinitlogout-wrong-alg": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "token"
+              ]
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "return": "final"
+        },
+        {
+          "method": "close",
+          "args": {
+            "issuer": "issuer",
+            "state": {
+              "authn_request": "state"
+            }
+          },
+          "expect_error": {
+            "MissingRequiredAttribute": "event"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-rp-backchannel-rpinitlogout-wrong-aud": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "token"
+              ]
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "return": "final"
+        },
+        {
+          "method": "close",
+          "args": {
+            "issuer": "issuer",
+            "state": {
+              "authn_request": "state"
+            }
+          },
+          "expect_error": {
+            "NotForMe": ""
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-rp-backchannel-rpinitlogout-wrong-event": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "token"
+              ]
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "return": "final"
+        },
+        {
+          "method": "close",
+          "args": {
+            "issuer": "issuer",
+            "state": {
+              "authn_request": "state"
+            }
+          },
+          "expect_error": {
+            "MissingRequiredAttribute": "event"
+          }
+        }
+      ]
+    },
+    "oidcc-client-test-rp-backchannel-rpinitlogout-wrong-iss": {
+      "sequence": [
+        {
+          "method": "begin",
+          "args": {
+            "issuer_id": "issuer",
+            "req_args": {
+              "response_type": [
+                "code",
+                "token"
+              ]
+            }
+          },
+          "return": "authn_request"
+        },
+        {
+          "method": "finalize",
+          "args": {
+            "issuer": "issuer",
+            "response": "response"
+          },
+          "return": "final"
+        },
+        {
+          "method": "close",
+          "args": {
+            "issuer": "issuer",
+            "state": {
+              "authn_request": "state"
+            }
+          },
+          "expect_error": {
+            "MissingRequiredAttribute": "event"
+          }
+        }
+      ]
+    }
+  }
+}
+
