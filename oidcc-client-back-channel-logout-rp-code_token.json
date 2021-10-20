@@ -24,7 +24,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_tokens": "True"
+            }
           },
           "return": "final"
         },
@@ -58,7 +61,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_tokens": "True"
+            }
           },
           "return": "final"
         },
@@ -92,7 +98,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_tokens": "True"
+            }
           },
           "return": "final"
         },
@@ -126,7 +135,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_tokens": "True"
+            }
           },
           "return": "final"
         },
@@ -160,7 +172,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_tokens": "True"
+            }
           },
           "return": "final"
         },
@@ -194,7 +209,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_tokens": "True"
+            }
           },
           "return": "final"
         },
@@ -228,7 +246,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_tokens": "True"
+            }
           },
           "return": "final"
         },
@@ -262,7 +283,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_tokens": "True"
+            }
           },
           "return": "final"
         },

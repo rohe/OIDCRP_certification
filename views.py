@@ -2,6 +2,8 @@ import json
 import logging
 import os
 import re
+import sys
+import traceback
 from urllib.parse import parse_qs
 
 from cryptojwt import KeyJar
@@ -123,6 +125,8 @@ def test_sequence():
                         logger.error(f"Unexpected exception: {err.__class__.__name__}")
             else:
                 logger.error(f"Not expected exception: {err.__class__.__name__}")
+                message = traceback.format_exception(*sys.exc_info())
+                logger.error(message)
 
             logger.error(f"{err}")
             current_app.test_result[test_id] = "-"
