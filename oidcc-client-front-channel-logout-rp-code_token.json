@@ -16,6 +16,9 @@
                 "code",
                 "token"
               ]
+            },
+            "behaviour_args": {
+              "collect_tokens": "True"
             }
           },
           "return": "authn_request"
