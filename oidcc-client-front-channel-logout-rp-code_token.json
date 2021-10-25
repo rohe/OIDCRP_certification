@@ -13,7 +13,8 @@
             "issuer_id": "issuer",
             "req_args": {
               "response_type": [
-                "code"
+                "code",
+                "token"
               ]
             }
           },
