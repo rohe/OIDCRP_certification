@@ -14,7 +14,7 @@
             "req_args": {
               "response_type": [
                 "code",
-                "idtoken",
+                "id_token",
                 "token"
               ]
             }
