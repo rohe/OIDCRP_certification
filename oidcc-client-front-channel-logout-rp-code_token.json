@@ -16,9 +16,6 @@
                 "code",
                 "token"
               ]
-            },
-            "behaviour_args": {
-              "collect_tokens": "True"
             }
           },
           "return": "authn_request"
@@ -27,7 +24,10 @@
           "method": "finalize",
           "args": {
             "issuer": "issuer",
-            "response": "response"
+            "response": "response",
+            "behaviour_args": {
+              "collect_tokens": "True"
+            }
           },
           "return": "final"
         },
